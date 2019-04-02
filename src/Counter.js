@@ -15,7 +15,7 @@ class Counter extends Component {
       payload: amt
     })
   }
-
+  // dispatches this action to store.js
 
   decrement=(amt)=>{
     store.dispatch({
@@ -23,15 +23,17 @@ class Counter extends Component {
       payload: amt
     })
   }
-
+  // dispatches this action to store.js
 
   undo=()=>{
     store.dispatch({ type: UNDO });
   }
+  // dispatches this action to store.js
 
   redo=()=>{
     store.dispatch({ type: REDO });
   }
+  // dispatches this action to store.js
 
   componentDidMount() {
     store.subscribe(() => {
@@ -40,6 +42,7 @@ class Counter extends Component {
       });
     });
   }
+  // as soon as the store subscribes or 'listens' to the redux store, it sets the state for this component
 
   render() {
     const {
